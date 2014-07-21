@@ -21,6 +21,8 @@ window.iOSFaceBookFriends(function (err, friends) {
   cordova plugin add https://github.com/nickbarth/cordova.parse.facebook.friends.git
 ```
 
+**NOTE**: You'll have to set your app category as a game and request the user_friends permission. See https://developers.facebook.com/docs/graph-api/reference/v2.0/user/invitable_friends
+
 ## LICENSE ##
 
 The MIT License
