@@ -17,7 +17,8 @@
             NSString *result = [NSString stringWithFormat: @"{ \"error\": false, \"friends\": ["];
 
             for (NSDictionary *friend in friends) {
-                result = [NSString stringWithFormat:@"%@ { \"name\": \"%@\", \"id\": \"%@\" },", result, [friend objectForKey:@"name"], [friend objectForKey:@"id"]];
+                result = [NSString stringWithFormat:@"%@ { \"id\": \"%@\", \"name\": \"%@\", \"picture\": \"%@\"},", 
+                    result, [friend objectForKey:@"id"], [friend objectForKey:@"name"], [friend objectForKey:@"picture"]];
             }
 
             result = [NSString stringWithFormat:@"%@] }", [result substringToIndex:[result length] - 1]];
