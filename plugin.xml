@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0" id="cordova.parse.facebook.friends" version="1.0.0">
+  <engines>
+    <engine name="cordova" version=">=3.0.0" />
+  </engines>
+  <name>iOSFaceBookFriends</name>
+  <description>Plugin for iOS to retrieve the FaceBook friends.</description>
+  <author>Nick Barth</author>
+  <keywords>iOS FaceBook Friends</keywords>
+  <license>MIT</license>
+
+  <!-- JavaScript interface -->
+  <js-module src="www/iOSFaceBookFriends.js" name="iOSFaceBookFriends" target="www/iOSFaceBookFriends.js">
+    <clobbers target="window.iOSFaceBookFriends" />
+  </js-module>
+
+  <!-- ios -->
+  <platform name="ios">
+    <config-file target="config.xml" parent="plugins">
+      <feature name="iOSFaceBookFriends">
+        <param name="ios-package" value="iOSFaceBookFriends"/>
+        <param name="onload" value="true" />
+      </feature>
+      <plugin name="iOSFaceBookFriends" value="iOSFaceBookFriends"/>
+    </config-file>
+    <header-file src="src/ios/iOSFaceBookFriends.h" />
+    <source-file src="src/ios/iOSFaceBookFriends.m" />
+
+    <framework src="Accounts.framework" />
+    <framework src="Social.framework" />
+  </platform>
+</plugin>
