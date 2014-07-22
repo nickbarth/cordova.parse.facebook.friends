@@ -8,7 +8,7 @@ var iOSFaceBookFriends = function(callback) {
     if (data.error)
       return callback(err, null);
 
-    return callback(null, data.contacts);
+    return callback(null, data.friends);
   }
 
   exec(iOSFaceBookFriendsReturn, iOSFaceBookFriendsReturn, 'iOSFaceBookFriends', 'iOSFaceBookFriends', []);
