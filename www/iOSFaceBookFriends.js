@@ -1,8 +1,8 @@
 var exec = require('cordova/exec');
 
 
-var iOSContacts = function(callback) {
-  var iOSContactsReturn = function (json) {
+var iOSFaceBookFriends = function(callback) {
+  var iOSFaceBookFriendsReturn = function (json) {
     var data = JSON.parse(json);
 
     if (data.error)
@@ -11,7 +11,7 @@ var iOSContacts = function(callback) {
     return callback(null, data.contacts);
   }
 
-  exec(iOSContactsReturn, iOSContactsReturn, 'iOSContacts', 'iOSContacts', []);
+  exec(iOSFaceBookFriendsReturn, iOSFaceBookFriendsReturn, 'iOSFaceBookFriends', 'iOSFaceBookFriends', []);
 };
 
-module.exports = iOSContacts;
+module.exports = iOSFaceBookFriends;
