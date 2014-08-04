@@ -20,7 +20,7 @@
                 
                 
                 
-                [[FBRequest requestForGraphPath:@"/me/friends?fields=id,name,picture"] startWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+                [[FBRequest requestForGraphPath:@"/me/invitable_friends?fields=id,name,picture"] startWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
                     if (error) {
                         NSLog(@"Error: %@", error);
                         
