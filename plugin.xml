@@ -7,7 +7,7 @@
   <description>Plugin for iOS to retrieve the FaceBook friends.</description>
   <author>Nick Barth</author>
   <keywords>iOS FaceBook Friends</keywords>
-  <license>MIT</license>
+  <license>CC0</license>
 
   <!-- JavaScript interface -->
   <js-module src="www/iOSFaceBookFriends.js" name="iOSFaceBookFriends" target="www/iOSFaceBookFriends.js">
