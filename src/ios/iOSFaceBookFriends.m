@@ -6,6 +6,8 @@
 
 - (void)iOSFaceBookFriends:(CDVInvokedUrlCommand *)command {
     self.callbackId = command.callbackId;
+    
+    [FBSettings enablePlatformCompatibility: YES];
     [[FBRequest requestForGraphPath:@"/me/friends?fields=id,name,picture"] startWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
         if (error) {
             NSLog(@"Error: %@", error);
